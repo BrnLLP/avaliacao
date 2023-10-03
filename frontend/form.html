@@ -34,7 +34,7 @@
 
         if (id !== null) {
 
-            axios.get('https://trabnuvem-w4no.vercel.app/aluno/'+ id +'')
+            axios.get('avaliacao-dusky.vercel.app/aluno'+ id +'')
             .then(function (response) {
                 document.getElementById('_id').value            =   response.data._id;
                 document.getElementById('matricula').value      =   response.data.matricula;
@@ -144,7 +144,7 @@
 
             if (_id === '') {
 
-                axios.post("https://trabnuvem-w4no.vercel.app/aluno", {
+                axios.post("avaliacao-dusky.vercel.app/aluno", {
 
                     matricula: parseInt(matricula),
                     nome: nome,
@@ -167,7 +167,7 @@
 
             } else {
                 
-                axios.put('https://trabnuvem-w4no.vercel.app/aluno/'+ _id +'', {
+                axios.put('avaliacao-dusky.vercel.app/aluno'+ _id +'', {
 
                     matricula: parseInt(matricula),
                     nome: nome,
