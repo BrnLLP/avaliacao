@@ -75,7 +75,7 @@
         </div>
     </div>
     <script>
-        axios.get('avaliacao-dusky.vercel.app/avaliacao')
+        axios.get('https://avaliacao-dusky.vercel.app/avaliacao')
             .then(function (response){
              document.getElementById('exibir').innerHTML = response.data.map(function (avaliacao){
                 return (
@@ -100,7 +100,7 @@
             });
 
         function excluiravaliacao(id) {
-            axios.delete(''+ id +'')
+            axios.delete('https://avaliacao-dusky.vercel.app/avaliacao'+ id +'')
             .then(function(response){
                 location.reload();
             })

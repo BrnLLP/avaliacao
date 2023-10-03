@@ -34,7 +34,7 @@
 
         if (id !== null) {
 
-            axios.get(''+ id +'')
+            axios.get('https://avaliacao-dusky.vercel.app/avaliacao'+ id +'')
             .then(function (response) {
                 document.getElementById('_id').value            =   response.data._id;
                 document.getElementById('q1').value           =   response.data.q1;

@@ -81,7 +81,7 @@
         </div>
     </div>
     <script>
-        axios.get('avaliacao-dusky.vercel.app/aluno')
+        axios.get('https://avaliacao-dusky.vercel.app/aluno')
             .then(function (response){
              document.getElementById('exibir').innerHTML = response.data.map(function (aluno){
                 return (
