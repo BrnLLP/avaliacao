@@ -144,7 +144,7 @@
 
             if (_id === '') {
 
-                axios.post("avaliacao-dusky.vercel.app/aluno", {
+                axios.post("https://avaliacao-dusky.vercel.app/aluno", {
 
                     matricula: parseInt(matricula),
                     nome: nome,
@@ -167,7 +167,7 @@
 
             } else {
                 
-                axios.put('avaliacao-dusky.vercel.app/aluno'+ _id +'', {
+                axios.put('https://avaliacao-dusky.vercel.app/aluno'+ _id +'', {
 
                     matricula: parseInt(matricula),
                     nome: nome,
