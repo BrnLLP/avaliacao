@@ -4,7 +4,7 @@ async function connect(){
   if(global.db) return global.db;
     const conn = await MongoClient.connect("mongodb+srv://bllp850:bllp850@projetoweb.kgpznen.mongodb.net/?retryWrites=true&w=majority");
   if(!conn) return new Error("Can't connect");
-    global.db = await conn.db("escola"); 
+    global.db = await conn.db("Escola"); 
   return global.db;
 }
 
