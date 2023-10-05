@@ -164,7 +164,7 @@
                 .catch(function (err){
                     document.getElementById("output").innerHTML = '<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>'+ err.message +'</strong><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
                 })
-                axios.post("https://avaliacao-dusky.vercel.app/aluno", {
+                axios.post("https://avaliacao-dusky.vercel.app/avaliacao", {
                     nome: nome,
                     q1: 0,
                     q2: 0,
