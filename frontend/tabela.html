@@ -91,7 +91,7 @@
             });
 
         function excluirAluno(id) {
-            axios.delete('avaliacao-dusky.vercel.app/aluno'+ id +'')
+            axios.delete('avaliacao-dusky.vercel.app/aluno/'+ id +'')
             .then(function(response){
                 location.reload();
             })
