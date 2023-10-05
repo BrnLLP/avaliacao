@@ -44,6 +44,11 @@
                 document.getElementById('q5').value           =   response.data.q5;
                 document.getElementById('q6').value           =   response.data.q6;
                 document.getElementById('q7').value           =   response.data.q7;
+                document.getElementById('q8').value           =   response.data.q8;
+                document.getElementById('q9').value           =   response.data.q9;
+                document.getElementById('q10').value           =   response.data.q10;
+                document.getElementById('q11').value           =   response.data.q11;
+                document.getElementById('q12').value           =   response.data.q12;
 
             })
             .catch(function (err) {
@@ -119,6 +124,26 @@
                         <label for="q7" class="form-label">Questão 7</label>
                         <input type="text" class="form-control" id="q7">
                     </div>
+                     <div class="mb-3">
+                        <label for="q8" class="form-label">Questão 8</label>
+                        <input type="text" class="form-control" id="q8">
+                    </div>
+                    <div class="mb-3">
+                        <label for="q9" class="form-label">Questão 9</label>
+                        <input type="text" class="form-control" id="q9">
+                    </div>
+                    <div class="mb-3">
+                        <label for="q10" class="form-label">Questão 10</label>
+                        <input type="text" class="form-control" id="q10">
+                    </div>
+                    <div class="mb-3">
+                        <label for="q11" class="form-label">Questão 11</label>
+                        <input type="text" class="form-control" id="q11">
+                    </div>
+                    <div class="mb-3">
+                        <label for="q12" class="form-label">Questão 12</label>
+                        <input type="text" class="form-control" id="q12">
+                    </div>
                         
 
                     <div id="botao"><script>botao();</script></div>
@@ -143,6 +168,11 @@
         const q5    =   document.getElementById("q5");
         const q6    =   document.getElementById("q6");
         const q7    =   document.getElementById("q7");
+        const q8    =   document.getElementById("q8");
+        const q9    =   document.getElementById("q9");
+        const q10    =   document.getElementById("q10");
+        const q11   =   document.getElementById("q11");
+        const q12    =   document.getElementById("q12");
         
 
         btn.addEventListener("click", () => {
@@ -153,7 +183,12 @@
             const q4        =   q4.value;
             const q5        =   q5.value;
             const q6        =   q6.value;
-            const q7        =   q7.value;    
+            const q7        =   q7.value;   
+            const q8        =   q8.value; 
+            const q9        =   q9.value; 
+            const q10       =   q10.value; 
+            const q11       =   q11.value; 
+            const q12       =   q12.value; 
                 
             axios.put(''+ _id +'', {
                     aluno: aluno,
@@ -163,7 +198,12 @@
                     q4: parseint(q4),
                     q5: parseint(q5),
                     q6: parseint(q6),
-                    q7: parseint(q7)
+                    q7: parseint(q7),
+                    q8: parseint(q8),
+                    q9: parseint(q9),
+                    q10: parseint(q10),
+                    q11: parseint(q11),
+                    q12: parseint(q12)
 
                 })
                 .then((response) => {
