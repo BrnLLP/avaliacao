@@ -83,8 +83,9 @@
     <script>
         axios.get('https://avaliacao-dusky.vercel.app/avaliacao')
             .then(function (response){
-              var nivel =  avaliacao.q1+avaliacao.q2+avaliacao.q3+avaliacao.q4+avaliacao.q5+avaliacao.q6+avaliacao.q7+avaliacao.q8+avaliacao.q9+avaliacao.q10+avaliacao.q11+avaliacao.q12;
+              
              document.getElementById('exibir').innerHTML = response.data.map(function (avaliacao){
+                 var nivel =  avaliacao.q1+avaliacao.q2+avaliacao.q3+avaliacao.q4+avaliacao.q5+avaliacao.q6+avaliacao.q7+avaliacao.q8+avaliacao.q9+avaliacao.q10+avaliacao.q11+avaliacao.q12;
                 return (
                     '<tr>' +
                         '<td> <a class="btn btn-outline-info btn-sm" href="#" role="button" onclick="javascript:return editaravaliacao(`'+avaliacao._id+'`);">Editar</a> </td>' +
