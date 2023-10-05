@@ -59,6 +59,7 @@
                     <th scope="col">Questão 10</th>
                     <th scope="col">Questão 11</th>
                     <th scope="col">Questão 12</th>
+                    <th scope="col">Nível</th>
                     <th scope="col"></th>
 
                   </tr>
@@ -82,6 +83,7 @@
     <script>
         axios.get('https://avaliacao-dusky.vercel.app/avaliacao')
             .then(function (response){
+              var nivel =  avaliacao.q1+avaliacao.q2+avaliacao.q3+avaliacao.q4+avaliacao.q5+avaliacao.q6+avaliacao.q7+avaliacao.q8+avaliacao.q9+avaliacao.q10+avaliacao.q11+avaliacao.q12;
              document.getElementById('exibir').innerHTML = response.data.map(function (avaliacao){
                 return (
                     '<tr>' +
@@ -99,6 +101,7 @@
                         '<td>'+ avaliacao.q10 +'</td>'  +
                         '<td>'+ avaliacao.q11 +'</td>'  +
                         '<td>'+ avaliacao.q12 +'</td>'  +
+                        '<td>'+ nivel +'</td>'  +
                         '<td> <a class="btn btn-outline-danger btn-sm" href="#" role="button" onclick="javascript:return excluiravaliacao(`'+avaliacao._id+'`);">Excluir</a> </td>' +
                     '</tr>'
                 );
