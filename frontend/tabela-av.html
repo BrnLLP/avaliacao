@@ -59,6 +59,7 @@
                     <th scope="col">Questão 10</th>
                     <th scope="col">Questão 11</th>
                     <th scope="col">Questão 12</th>
+                    <th scope="col">Pontuação</th>
                     <th scope="col">Nível</th>
                     <th scope="col"></th>
 
@@ -85,7 +86,17 @@
             .then(function (response){
               
              document.getElementById('exibir').innerHTML = response.data.map(function (avaliacao){
-                 var nivel =  avaliacao.q1+avaliacao.q2+avaliacao.q3+avaliacao.q4+avaliacao.q5+avaliacao.q6+avaliacao.q7+avaliacao.q8+avaliacao.q9+avaliacao.q10+avaliacao.q11+avaliacao.q12;
+                 var nivel = "";
+                 var pontuacao =  avaliacao.q1+avaliacao.q2+avaliacao.q3+avaliacao.q4+avaliacao.q5+avaliacao.q6+avaliacao.q7+avaliacao.q8+avaliacao.q9+avaliacao.q10+avaliacao.q11+avaliacao.q12;
+                 if(pontuacao <= 8){
+                     nivel="CRÍTICO";
+                 }
+                 else if(pontuacao > 7 && pontuacao <= 16){
+                     nivel="INTERMEDIÁRIO";
+                 }
+                 else{
+                     nivel="ADEQUADO";
+                 }
                 return (
                     '<tr>' +
                         '<td> <a class="btn btn-outline-info btn-sm" href="#" role="button" onclick="javascript:return editaravaliacao(`'+avaliacao._id+'`);">Editar</a> </td>' +
