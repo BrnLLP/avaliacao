@@ -88,10 +88,10 @@
              document.getElementById('exibir').innerHTML = response.data.map(function (avaliacao){
                  var nivel = "";
                  var pontuacao =  avaliacao.q1+avaliacao.q2+avaliacao.q3+avaliacao.q4+avaliacao.q5+avaliacao.q6+avaliacao.q7+avaliacao.q8+avaliacao.q9+avaliacao.q10+avaliacao.q11+avaliacao.q12;
-                 if(pontuacao <= 8){
+                 if(pontuacao <= 12){
                      nivel="CRÍTICO";
                  }
-                 else if(pontuacao > 8 && pontuacao <= 16){
+                 else if(pontuacao > 12 && pontuacao <= 24){
                      nivel="INTERMEDIÁRIO";
                  }
                  else{
